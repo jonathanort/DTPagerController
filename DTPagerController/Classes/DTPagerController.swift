@@ -174,12 +174,6 @@ open class DTPagerController: UIViewController, UIScrollViewDelegate {
         super.init(coder: aDecoder)
     }
     
-    deinit {
-        for viewController in viewControllers {
-            viewController.removeObserver(self, forKeyPath: #keyPath(title))
-        }
-    }
-    
     override open func loadView() {
         super.loadView()
         automaticallyAdjustsScrollViewInsets = false
